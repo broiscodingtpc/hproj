@@ -1,71 +1,66 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ShieldCheck, Activity, Zap, ChevronRight } from 'lucide-react';
+import { Zap, ShieldCheck, BrainCircuit } from 'lucide-react';
 
-const Hero = () => {
+const FEATURES = [
+  { icon: '⚡', label: '2.8s finality on Solana' },
+  { icon: '🔐', label: '2-of-3 multi-sig vaults' },
+  { icon: '🤖', label: 'AI-routed every settlement' },
+];
+
+export default function Hero() {
   return (
-    <section className="hero-section" style={{ padding: '8rem 0 4rem 0', position: 'relative' }}>
-      <div className="bg-glow"></div>
-      
-      <div className="app-container">
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}
-        >
-          <div style={{ display: 'inline-flex', alignItems: 'center', padding: '6px 16px', background: 'var(--glass-bg)', borderRadius: '20px', border: '1px solid var(--glass-border)', marginBottom: '2rem' }}>
-            <span style={{ height: '8px', width: '8px', borderRadius: '50%', background: 'var(--accent-green)', marginRight: '8px', boxShadow: '0 0 10px var(--accent-green)' }}></span>
-            <span style={{ fontSize: '0.85rem', fontWeight: 500, letterSpacing: '1px', textTransform: 'uppercase' }}>Solana Hackathon Frontier Submission</span>
+    <section style={{ padding: 'var(--sp-24) 0 var(--sp-16) 0', position: 'relative', overflow: 'hidden' }}>
+      <div className="bg-glow-hero" />
+      <div className="container" style={{ position: 'relative', zIndex: 1, textAlign: 'center' }}>
+
+        <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} style={{ marginBottom: 'var(--sp-8)' }}>
+          <span className="badge badge-green"><span className="dot dot-pulse" />Solana Hackathon Frontier 2026</span>
+        </motion.div>
+
+        <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.08 }}
+          style={{ fontSize: 'var(--text-6xl)', fontWeight: 900, lineHeight: 1.1, letterSpacing: '-0.04em', maxWidth: 820, margin: '0 auto var(--sp-6) auto' }}>
+          Cross-border treasury<br />
+          <span className="gradient-text">from $847 → $0.42</span>
+        </motion.h1>
+
+        <motion.p initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.16 }}
+          className="body-lg" style={{ maxWidth: 620, margin: '0 auto var(--sp-10) auto' }}>
+          AI-powered settlement for emerging-market multinationals. 2-of-3 multi-sig vaults on Solana.
+          ML route optimizer. Full compliance audit trail. Live on devnet today.
+        </motion.p>
+
+        <motion.div className="flex-center gap-4" style={{ flexWrap: 'wrap', marginBottom: 'var(--sp-12)' }}
+          initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.24 }}>
+          <a href="#demo" className="btn btn-primary btn-lg">▶ Run Live Demo</a>
+          <a href="https://github.com/broiscodingtpc/hproj" target="_blank" rel="noopener noreferrer" className="btn btn-ghost btn-lg">↗ View on GitHub</a>
+        </motion.div>
+
+        <motion.div className="flex-center gap-4" style={{ flexWrap: 'wrap', marginBottom: 'var(--sp-16)' }}
+          initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.35 }}>
+          {FEATURES.map((f, i) => (
+            <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '0.4rem 1rem', background: 'var(--bg-2)', border: '1px solid var(--border-2)', borderRadius: 'var(--r-pill)', color: 'var(--text-2)', fontSize: 'var(--text-sm)' }}>
+              <span>{f.icon}</span>{f.label}
+            </div>
+          ))}
+        </motion.div>
+
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.45 }}
+          style={{ display: 'inline-grid', gridTemplateColumns: '1fr auto 1fr', gap: 'var(--sp-8)', alignItems: 'center', background: 'var(--bg-2)', border: '1px solid var(--border-2)', borderRadius: 'var(--r-xl)', padding: 'var(--sp-6) var(--sp-10)' }}>
+          <div style={{ textAlign: 'right' }}>
+            <div style={{ fontSize: 'var(--text-xs)', color: 'var(--text-3)', marginBottom: 4 }}>SWIFT wire today</div>
+            <div style={{ fontSize: 'var(--text-4xl)', fontWeight: 900, color: 'var(--color-error)', letterSpacing: '-0.03em' }}>$847</div>
+            <div style={{ fontSize: 'var(--text-xs)', color: 'var(--text-3)', marginTop: 4 }}>3–5 days · no visibility</div>
           </div>
-          
-          <h1 style={{ fontSize: '4rem', fontWeight: 800, marginBottom: '1.5rem', lineHeight: 1.1 }}>
-            Automating Treasury in <br />
-            <span className="text-gradient">Emerging Markets.</span>
-          </h1>
-          
-          <p style={{ fontSize: '1.2rem', marginBottom: '2.5rem', maxWidth: '600px', margin: '0 auto 2.5rem auto' }}>
-            Treasury Agent is an AI-powered banking platform solving the $50M treasury management gap with 3-second Solana settlement and reinforced learning route optimization.
-          </p>
-          
-          <div className="flex-center" style={{ gap: '1rem', marginBottom: '4rem' }}>
-            <button className="primary-btn flex-center">
-              View the Source
-              <ChevronRight size={18} style={{ marginLeft: '6px' }} />
-            </button>
-            <button className="secondary-btn">
-              Watch Demo
-            </button>
+          <div style={{ fontSize: 60, color: 'var(--text-3)', lineHeight: 1 }}>→</div>
+          <div style={{ textAlign: 'left' }}>
+            <div style={{ fontSize: 'var(--text-xs)', color: 'var(--text-3)', marginBottom: 4 }}>Treasury Agent</div>
+            <div style={{ fontSize: 'var(--text-4xl)', fontWeight: 900, color: 'var(--brand-green)', letterSpacing: '-0.03em' }}>$0.42</div>
+            <div style={{ fontSize: 'var(--text-xs)', color: 'var(--text-3)', marginTop: 4 }}>2.8 seconds · on-chain proof</div>
           </div>
         </motion.div>
 
-        {/* Floating Metrics */}
-        <div className="grid" style={{ gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.5rem' }}>
-          {[
-            { title: 'Settlement Speed', value: '3 Seconds', icon: <Zap color="var(--accent-green)" />, sub: 'vs 3-5 days traditional' },
-            { title: 'Optimal Routing', value: '0.15% Cost', icon: <Activity color="var(--accent-purple)" />, sub: 'AI learns best paths' },
-            { title: 'Compliance', value: '100% Audit', icon: <ShieldCheck color="#ffffff" />, sub: 'On-chain trails' }
-          ].map((metric, i) => (
-            <motion.div 
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 + (i * 0.1) }}
-              className="glass-panel"
-              style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}
-            >
-              <div style={{ background: 'rgba(255,255,255,0.05)', padding: '12px', borderRadius: '12px', marginBottom: '1rem' }}>
-                {metric.icon}
-              </div>
-              <p style={{ fontSize: '0.9rem', marginBottom: '4px' }}>{metric.title}</p>
-              <h3 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '4px', color: '#fff' }}>{metric.value}</h3>
-              <p style={{ fontSize: '0.8rem', color: 'var(--accent-green)' }}>{metric.sub}</p>
-            </motion.div>
-          ))}
-        </div>
       </div>
     </section>
   );
-};
-
-export default Hero;
+}
