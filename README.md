@@ -232,5 +232,6 @@ solanahackathon/
 ---
 
 **Built for**: Solana Hackathon Frontier  
+**GitHub**: https://github.com/broiscodingtpc/hproj  
 **Status**: Ready to build | Ready for fundraising | Ready for production  
 **Created**: April 2026

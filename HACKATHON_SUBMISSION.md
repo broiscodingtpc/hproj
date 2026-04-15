@@ -252,7 +252,7 @@ If judges ask...
 - [ ] Development Setup Guide (`DEVELOPMENT_SETUP.md`) ✓
 - [ ] README with project overview (`README.md`) ✓
 - [ ] This submission guide (`HACKATHON_SUBMISSION.md`) ✓
-- [ ] GitHub repository with code (to be added)
+- [x] GitHub repository: https://github.com/broiscodingtpc/hproj
 - [ ] Live demo running (test on devnet)
 - [ ] Solana contracts deployed (devnet)
 - [ ] Team info with bios
@@ -315,7 +315,7 @@ curl http://localhost:5000/health
 **9:00 - Ask & Call to Action** (1 min)
 - $500k seed round
 - Vote for Treasury Agent
-- Visit github.com/treasury-agent/treasury-agent
+- Visit https://github.com/broiscodingtpc/hproj
 
 ---
 
