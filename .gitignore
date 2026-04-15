@@ -37,3 +37,6 @@ contracts/.anchor/
 
 # Test coverage
 coverage/
+__pycache__/
+*.pyc
+*.pkl
