@@ -1,6 +1,7 @@
 import React from 'react';
 import Hero from './components/Hero';
 import LiveDashboard from './components/LiveDashboard';
+import Dashboard from './components/Dashboard';
 import RoutingComparison from './components/RoutingComparison';
 import Architecture from './components/Architecture';
 import Financials from './components/Financials';
@@ -19,6 +20,7 @@ function App() {
           </div>
           <div style={{ display: 'flex', gap: '2rem' }}>
             <a href="#demo" style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 500 }}>Demo</a>
+            <a href="#dashboard" style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 500 }}>Dashboard</a>
             <a href="#architecture" style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 500 }}>Architecture</a>
             <a href="#economics" style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 500 }}>Economics</a>
           </div>
@@ -28,6 +30,7 @@ function App() {
       <main>
         <Hero />
         <LiveDashboard />
+        <Dashboard />
         <RoutingComparison />
         <div id="architecture">
           <Architecture />
