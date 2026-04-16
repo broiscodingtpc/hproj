@@ -1,0 +1,119 @@
+/* ============================================================
+   TREASURY AGENT — DESIGN SYSTEM TOKENS
+   Single source of truth for every visual value in the app.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  /* ── Brand ─────────────────────────────────────────────── */
+  --brand-green:        #14F195;
+  --brand-purple:       #9945FF;
+  --brand-green-dim:    rgba(20, 241, 149, 0.15);
+  --brand-purple-dim:   rgba(153, 69, 255, 0.15);
+  --brand-green-border: rgba(20, 241, 149, 0.3);
+  --brand-purple-border:rgba(153, 69, 255, 0.3);
+
+  /* ── Semantic ───────────────────────────────────────────── */
+  --color-success:  #4ade80;
+  --color-warning:  #facc15;
+  --color-error:    #f87171;
+  --color-info:     #60a5fa;
+
+  /* ── Backgrounds ────────────────────────────────────────── */
+  --bg-0: #020207;   /* page base */
+  --bg-1: #07080F;   /* section */
+  --bg-2: #0D0F1A;   /* card */
+  --bg-3: #141825;   /* elevated card */
+  --bg-4: #1C2235;   /* modal / overlay */
+
+  /* ── Text ───────────────────────────────────────────────── */
+  --text-1: #FFFFFF;
+  --text-2: #94A3B8;
+  --text-3: #4A5568;
+  --text-inverse: #020207;
+
+  /* ── Borders ────────────────────────────────────────────── */
+  --border-1: rgba(255, 255, 255, 0.05);
+  --border-2: rgba(255, 255, 255, 0.09);
+  --border-3: rgba(255, 255, 255, 0.15);
+
+  /* ── Spacing (4px base grid) ────────────────────────────── */
+  --sp-1:  4px;
+  --sp-2:  8px;
+  --sp-3:  12px;
+  --sp-4:  16px;
+  --sp-5:  20px;
+  --sp-6:  24px;
+  --sp-8:  32px;
+  --sp-10: 40px;
+  --sp-12: 48px;
+  --sp-16: 64px;
+  --sp-20: 80px;
+  --sp-24: 96px;
+
+  /* ── Border Radius ──────────────────────────────────────── */
+  --r-xs:   4px;
+  --r-sm:   8px;
+  --r-md:   12px;
+  --r-lg:   16px;
+  --r-xl:   24px;
+  --r-pill: 9999px;
+
+  /* ── Typography ─────────────────────────────────────────── */
+  --font-sans: 'Outfit', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  --text-xs:   0.72rem;   /* 11.5px */
+  --text-sm:   0.85rem;   /* 13.6px */
+  --text-base: 1rem;      /* 16px   */
+  --text-lg:   1.125rem;  /* 18px   */
+  --text-xl:   1.25rem;   /* 20px   */
+  --text-2xl:  1.5rem;    /* 24px   */
+  --text-3xl:  1.875rem;  /* 30px   */
+  --text-4xl:  2.25rem;   /* 36px   */
+  --text-5xl:  3rem;      /* 48px   */
+  --text-6xl:  3.75rem;   /* 60px   */
+  --text-7xl:  4.5rem;    /* 72px   */
+
+  --weight-normal:    400;
+  --weight-medium:    500;
+  --weight-semibold:  600;
+  --weight-bold:      700;
+  --weight-extrabold: 800;
+  --weight-black:     900;
+
+  --leading-tight:  1.15;
+  --leading-snug:   1.35;
+  --leading-normal: 1.6;
+  --leading-relaxed:1.75;
+
+  /* ── Shadows ────────────────────────────────────────────── */
+  --shadow-sm:     0 1px 3px rgba(0,0,0,0.5);
+  --shadow-md:     0 4px 16px rgba(0,0,0,0.6);
+  --shadow-lg:     0 8px 32px rgba(0,0,0,0.7);
+  --shadow-glow-g: 0 0 24px rgba(20,241,149,0.25), 0 0 48px rgba(20,241,149,0.1);
+  --shadow-glow-p: 0 0 24px rgba(153,69,255,0.25), 0 0 48px rgba(153,69,255,0.1);
+
+  /* ── Transitions ────────────────────────────────────────── */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.45, 0, 0.55, 1);
+  --dur-fast:   120ms;
+  --dur-normal: 220ms;
+  --dur-slow:   400ms;
+
+  /* ── Layout ─────────────────────────────────────────────── */
+  --max-w: 1200px;
+  --nav-h: 64px;
+
+  /* ── Aliases (backward compat with existing components) ─── */
+  --bg-primary:    var(--bg-0);
+  --bg-secondary:  var(--bg-1);
+  --bg-tertiary:   var(--bg-2);
+  --text-primary:  var(--text-1);
+  --text-secondary:var(--text-2);
+  --accent-green:  var(--brand-green);
+  --accent-purple: var(--brand-purple);
+  --glass-bg:      rgba(255,255,255,0.03);
+  --glass-border:  var(--border-2);
+}

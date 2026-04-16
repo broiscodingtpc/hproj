@@ -1,0 +1,42 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build outputs
+dist/
+build/
+target/
+.anchor/
+
+# Environment files (never commit secrets)
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbis.db
+
+# IDE
+.vscode/
+.idea/
+
+# Rust / Anchor build artifacts
+contracts/target/
+contracts/.anchor/
+
+# Lock files from Office apps
+.~lock.*
+
+# Test coverage
+coverage/
+__pycache__/
+*.pyc
+*.pkl
