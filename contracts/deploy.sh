@@ -37,7 +37,7 @@ PROGRAM_ID=$(solana address -k target/deploy/treasury_vault-keypair.json)
 echo "Program ID: $PROGRAM_ID"
 
 # 6. Update Anchor.toml with real ID
-sed -i.bak "s|TVau1tProgramID11111111111111111111111111|$PROGRAM_ID|g" Anchor.toml
+sed -i.bak "s|Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS|$PROGRAM_ID|g" Anchor.toml
 echo "Updated Anchor.toml with program ID"
 
 # 7. Deploy
