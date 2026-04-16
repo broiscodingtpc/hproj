@@ -1,12 +1,15 @@
+[toolchain]
+anchor_version = "1.0.0"
+
 [features]
 seeds = false
 skip-lint = false
 
 [programs.localnet]
-treasury_vault = "Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS"
+treasury_vault = "7d722pJ46zJJN1GdzY8E44QQosmZUvkBFdnhhKUreTJ3"
 
 [programs.devnet]
-treasury_vault = "Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS"
+treasury_vault = "7d722pJ46zJJN1GdzY8E44QQosmZUvkBFdnhhKUreTJ3"
 
 [registry]
 url = "https://api.apr.dev"

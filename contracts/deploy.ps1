@@ -54,7 +54,7 @@ $programId = (solana address -k $kp).Trim()
 Write-Host "Program ID: $programId" -ForegroundColor Green
 
 $toml = Get-Content "Anchor.toml" -Raw
-$toml = $toml -replace "Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS", $programId
+$toml = $toml -replace "7d722pJ46zJJN1GdzY8E44QQosmZUvkBFdnhhKUreTJ3", $programId
 Set-Content "Anchor.toml" $toml
 
 Write-Host ""
